@@ -11,6 +11,9 @@ const useGif = (tag) => {
 
     const fetchGif = async (tag) => {
         const {data} = await axios.get(tag ? `${url}&tag=${tag}`:url )
+        const imageSrc = data.data.images.downsized_large.url;
+
+        setGif(imageSrc);
     }
 
 
