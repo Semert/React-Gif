@@ -16,6 +16,10 @@ const useGif = (tag) => {
         setGif(imageSrc);
     }
 
+    useEffect(()=>{
+        fetchGif(tag)
+    },[tag])
+
 
     return { gif, fetchGif }
 }
